@@ -1,4 +1,4 @@
-let namaTeman = ["Beni", "Aiddhul", "Putra"]
+const namaTeman = ["Beni", "Aiddhul", "Putra"]
 
 namaTeman.push("Abdul")//menambah 1 array
 
@@ -11,7 +11,6 @@ delete namaTeman[2]//menghapus isi value array
 namaTeman.push(1, 2, 4, 3)
 
 namaTeman.push(["Kamsud", "Hari", "Kambing"])//menambah array kedalam array
-
 
 console.table(namaTeman)
 
