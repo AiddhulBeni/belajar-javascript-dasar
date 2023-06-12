@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nullish Operator</title>
+</head>
+<body>
+    <script>
+        let parameter = 2;
+
+        let data = parameter;
+        if (data === null || data === undefined) {
+            data = "undefined/null";
+        }else{
+            data = 10
+        }
+        console.log(data)
+
+        //nullish operator
+        data = parameter ?? "undefined/null";
+        console.log(data)
+
+    </script>
+</body>
+</html>

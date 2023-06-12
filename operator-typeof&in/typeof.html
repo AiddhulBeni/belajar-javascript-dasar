@@ -4,19 +4,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Null</title>
+    <title>Typeof</title>
   </head>
   <body>
     <script>
-      let name;
-      if (name === null) {
-        console.info("benar itu null");
-      } else if (name === undefined) {
-        console.info("itu bukan null");
-      } else {
-        console.info(name);
-        console.info("itu number")
+      const fromUser = confirm();
+      let type = fromUser;
+
+      if(fromUser == true){
+        document.writeln(`<p>${type}</p>`);
+      }else {
+        document.writeln(`<p>${type}</p>`);
       }
+
+      
+
     </script>
   </body>
 </html>
