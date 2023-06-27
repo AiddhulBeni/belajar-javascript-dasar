@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keliling Lingkaran</title>
+</head>
+<body>
+    <div class="container">
+        <label >Diameter :</label><br>
+        <input type="text" id="diameter"><br><br>
+        <button id="fungsiKeliling">Submit</button>
+        <p id="result"></p>
+    </div>
+
+
+    <script>
+        const phi = Math.PI;
+        
+        document.getElementById('fungsiKeliling').oneclick = function(){
+            let radius = Number(document.getElementById('diameter')).value;
+            radius = 10
+            const result = 2 * radius;
+            console.log(result);
+            document.getElementById('result').innerHTML = result;
+        }
+       
+    </script>
+</body>
+</html>

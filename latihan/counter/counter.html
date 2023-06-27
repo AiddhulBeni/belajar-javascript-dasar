@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .container {
+            width: 40%;
+            height: 400px;
+            background-color: #cdb4db;
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            margin: 50px auto;
+            box-shadow: 2px black;
+        }
+      h1 {
+        margin-top: 100px;
+        text-shadow: 1px 1px 4px rgb(68, 62, 62);
+        color: rgb(252, 238, 238);
+        font-size: 50px;
+        text-align: center;
+      }
+      div {
+        text-align: center;
+      }
+      .button-items{
+        margin: 100px;
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+      }
+      button{
+        cursor: pointer;
+        background-color: #bde0fe;
+        border: none;
+        border-radius: 10px;
+        width: 100px;
+        padding: 15px;
+        font-size: 15px;
+        text-transform: capitalize;
+      }
+      button:active{
+        transform: scale(.95);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+    <h1 id="number">0</h1>
+    <div class="button-items">
+      <button id="kurang">kurang</button>
+      <button id="reset">reset</button>
+      <button id="tambah">tambah</button>
+    </div>
+    </div>
+  </body>
+  <script>
+    let count = 0;
+
+    document.getElementById('kurang').onclick = function(){
+        count--;
+        document.getElementById('number').innerHTML = count;
+    }
+    document.getElementById('reset').onclick = function(){
+        count=0;
+        document.getElementById('number').innerHTML = count;
+    }
+    document.getElementById('tambah').onclick = function(){
+        count++;
+        document.getElementById('number').innerHTML = count;
+    }
+  </script>
+</html>

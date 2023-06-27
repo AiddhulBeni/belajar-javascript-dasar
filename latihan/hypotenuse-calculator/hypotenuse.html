@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hypotenuse</title>
+  </head>
+  <body>
+    <label id="sideA">Side A :</label><br />
+    <input type="text" id="inputSideA" /><br />
+    <label id="sideA">Side B :</label><br />
+    <input type="text" id="inputSideB" /><br /><br />
+    <button type="button" id="btnFunction">Submit</button>
+    <p id="resultC"></p>
+  </body>
+  <script>
+    document.getElementById("btnFunction").onclick = function () {
+      let A = Number(document.getElementById("inputSideA").value);
+      let B = Number(document.getElementById("inputSideB").value);
+
+      let C = Math.sqrt(Math.pow(A, 2) + Math.pow(B, 2));
+
+      if (isNaN(A) || isNaN(B)) {
+        document.getElementById("resultC").innerHTML =`<p style="color: red;">Please input valid numbers</p>`;
+      } else {
+        document.getElementById("resultC").innerHTML = `Side C = ${Math.round(C)}`;
+      }
+    };
+  </script>
+</html>
