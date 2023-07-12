@@ -17,10 +17,13 @@
 
       document.writeln("<br>");
 
-      let a = 5;
+      const names = ["Samsul", "Jambu", "Kuntilanak", "Medan"]
 
-      document.writeln(a++);
-      document.writeln(a);
+      for(let i = 1;i<names.length;i++) {
+        for(const name of names) {
+          document.writeln(`<p>${names}<p>`);
+        }
+      }
     </script>
   </body>
 </html>

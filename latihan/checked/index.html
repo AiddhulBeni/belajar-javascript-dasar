@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checked</title>
+    <style>
+      body {
+        box-sizing: border-box;
+      }
+      div {
+        background-color: #aaa;
+        padding: 100px;
+        height: 250px;
+      }
+      button {
+        background-color: #dda15e;
+        display: block;
+        margin: 10px auto 20px;
+        padding: 15px;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+      button:active {
+        transform: scale(0.95);
+      }
+      p {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="subscribe">SUBSCRIBE</label>
+      <input type="checkbox" name="checkbox" id="checkbox" /><br /><br />
+      <label for="payment">Payment metode:</label><br />
+      <input type="radio" name="payment" value="paypal" id="paypal"/>
+      <label for="paypal">PayPal</label><br>
+      <input type="radio" name="payment" value="dana" id="dana"/> 
+      <label for="dana">Dana</label><br>
+      <input type="radio" name="payment" value="shopeepay" id="shopeepay"/> 
+      <label for="shopeepay">ShopeePay</label><br> 
+      <input type="radio" name="payment" value="creditcard" id="creditcard"/> 
+      <label for="creditcard">Credit Card</label><br>
+      <button id="myBtn">Subscribe</button>
+      <p id="ifSubscribe"></p>
+      <p id="paymentMetode"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+

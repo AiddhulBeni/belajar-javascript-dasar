@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan array</title>
+  </head>
+  <body>
+    <label for="userInput">Masukkan nama kamu :</label><br />
+    <input type="text" id="userInput" />
+    <button type="button" id="enter">enter</button>
+    <p id="result"></p>
+
+    <script>
+      const names = ["Beni", "Bendot", "Jambul", "Krisna", "Samsul"];
+
+      document.getElementById("enter").onclick = function () {
+        const user = document.getElementById("userInput").value;
+        names.push(user);
+
+        numberNames();
+      };
+
+      function numberNames() {
+        document.getElementById("result").innerHTML = "";
+
+        for (let i = 0; i < names.length; i++) {
+          const name = names[i];
+          const number = i + 1;
+
+          const result = `<p>${number}. ${name}</p>`;
+
+          document.getElementById("result").innerHTML += result;
+        }
+      }
+
+      numberNames();//menampilkan data pada array(names)
+       
+      document.getElementById("userInput").addEventListener("keypress", function (enter) {
+        if(enter.key == "enter"){
+          
+        }
+      });
+
+    </script>
+  </body>
+</html>

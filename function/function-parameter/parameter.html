@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parameter</title>
+  </head>
+  <body>
+    <script>
+      let nama = ["Beni", "Jordan", "Munir", "Joko"];
+    
+      for (let personName of nama) {
+        document.writeln(`<p>${personName}. </p>`);
+      }
+
+      function startProgram(){
+        let name = "Beni";
+        let age = 18;
+
+        happyBirthday(name, age);
+      }  
+
+      function happyBirthday(a, b) {
+        document.writeln("<p>Happy birthday to you</p>");
+        document.writeln("<p>Happy birthday to you</p>");
+        document.writeln("<p>Happy birthday ", a);
+        document.writeln("<p>Happy birthday to you");
+        document.writeln("<p>You are ", b, " years old.");
+      }
+
+      startProgram();
+
+    </script>
+  </body>
+</html>
