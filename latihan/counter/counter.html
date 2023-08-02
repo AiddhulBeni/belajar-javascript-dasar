@@ -66,12 +66,12 @@
   <script>
     let count = 0;
     let intervalId;
+    let isButtonPressed = false;
 
-    document
-      .getElementById("kurang")
-      .addEventListener("mousedown", function () {
+    document.getElementById("kurang").addEventListener("mousedown", function () {
+        isButtonPressed = true
         intervalId = setInterval(function () {
-          if (count > 0) {
+          if (isButtonPressed && count > 0) {
             count--;
             document.getElementById("number").innerHTML = count;
           }
@@ -81,6 +81,10 @@
     document.getElementById("kurang").addEventListener("mouseup", function () {
       clearInterval(intervalId);
     });
+
+    document.getElementById("kurang").addEventListener("mouseleave", function () {
+        clearInterval(intervalId);
+      });
 
     document.getElementById("reset").onclick = function () {
       count = 0;

@@ -8,7 +8,7 @@
   <body>
     <div class="container">
       <label>Diameter :</label><br />
-      <input type="text" id="diameter"/> <br><br>
+      <input type="text" id="diameter" /> <br /><br />
       <button id="btnFunction">Submit</button>
       <p>Hasil : <span id="result"></span></p>
     </div>
@@ -16,13 +16,41 @@
     <script>
       const phi = Math.PI;
 
-      document.getElementById('btnFunction').onclick = function() {
-        let radius = Number(document.getElementById('diameter').value);
+      document.getElementById("btnFunction").onclick = function () {
+        calculateResult();
+      };
+
+      document
+        .getElementById("diameter")
+        .addEventListener("keypress", function (event) {
+          if (event.key === "Enter") {
+            calculateResult();
+          }
+        });
+
+      function calculateResult() {
+        let radius = Number(document.getElementById("diameter").value);
         const result = 2 * radius * phi;
 
-        console.log(result)
-        document.getElementById("result").innerHTML = Math.round(result);
-      };
+        if(isNaN(radius)){
+          document.getElementById("result").innerHTML =`<p style="color: red;">Please input valid numbers</p>`;
+        }else{
+          document.getElementById("result").innerHTML = Math.round(result);
+        }
+      }
     </script>
   </body>
 </html>
+
+<!-- 
+<script>
+  const phi = Math.PI;
+
+  document.getElementById('btnFunction').onclick = function() {
+    let radius = Number(document.getElementById('diameter').value);
+    const result = 2 * radius * phi;
+
+    console.log(result)
+    document.getElementById("result").innerHTML = Math.round(result);
+  };
+</script> -->
