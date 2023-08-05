@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8" />  
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Counter</title>
     <style>
@@ -11,7 +11,7 @@
           sans-serif;
       }
       .container {
-        width: 40%;
+        width: min-max(80vw, 500px);
         height: 400px;
         background-color: #cdb4db;
         border: 1px solid #aaa;
@@ -68,8 +68,10 @@
     let intervalId;
     let isButtonPressed = false;
 
-    document.getElementById("kurang").addEventListener("mousedown", function () {
-        isButtonPressed = true
+    document
+      .getElementById("kurang")
+      .addEventListener("mousedown", function () {
+        isButtonPressed = true;
         intervalId = setInterval(function () {
           if (isButtonPressed && count > 0) {
             count--;
@@ -82,7 +84,9 @@
       clearInterval(intervalId);
     });
 
-    document.getElementById("kurang").addEventListener("mouseleave", function () {
+    document
+      .getElementById("kurang")
+      .addEventListener("mouseleave", function () {
         clearInterval(intervalId);
       });
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Default Parameter</title>
+</head>
+<body>
+    <script>
+        function defaultParameter(names, ages = "Unknown") {
+                console.log("Nama : ", names);
+                console.log("Umur : ", ages)
+        }
+
+        let userName = window.prompt("Enter your name ")
+        let userAge = window.prompt("Enter your age ")
+
+
+        defaultParameter(userName, userAge);
+    </script>
+</body>
+</html>
