@@ -21,6 +21,8 @@ function calculateResult() {
       "result"
     ).innerHTML = `<p style="color: red;">Please input valid numbers</p>`;
   } else {
-    document.getElementById("result").innerHTML = Math.round(result);
+    document.getElementById("result").innerHTML = result.toFixed(3);
   }
+
+  console.log(result);
 }

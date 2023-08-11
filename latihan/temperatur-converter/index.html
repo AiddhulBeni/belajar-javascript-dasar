@@ -6,9 +6,9 @@
     <title>Temperatur Converter</title>
   </head>
   <body>
-    <div>
+    <section>
       <label for="">Input Temperatur</label>
-      <input type="text" id="userInput" /><br />
+      <input type="text" id="userInput" placeholder="Masukkan suhu" step="0.01"/>&#176C<br />
 
       <div>
         <label for="">Convert to :</label><br />
@@ -25,12 +25,31 @@
         <input type="radio" name="unit" id="kelvinButton" />
         <label for="kelvinButton">Kelvin</label>
       </div>
-    </div>
+    </section>
 
     <button id="submitButton">Submit</button>
 
     <p>Hasil : <span id="result"></span></p>
 
+  
     <script src="script.js"></script>
+    <script src="temp-convert.js"></script>
   </body>
 </html>
+
+
+<!-- <section>
+  <label for="">Input Temperatur</label>
+  <input type="text" id="userInput" /><br /><brC>
+  <label for="convertTo">Convert To : </label><br />
+  <select name="convert" id="convertTo">
+    <option value="" >Celcius</option>
+    <option value="">Fahrenheit</option>
+    <option value="">Kelvin</option>
+  </select>
+</section>
+<br />
+
+<button id="submitButton">Submit</button>
+
+<p>Hasil : <span id="result"></span></p> -->
