@@ -1,40 +1,29 @@
 const userInput = Number(document.getElementById("userInput").value);
+const fromUnit = document.getElementById("fromUnit").value;
+const toUnit = document.getElementById("toUnit").value;
 const submitButton = document.getElementById("submitButton");
-const resultField = document.getElementById("result");
+const result = document.getElementById("result");
+//const userInput = 10
 
-
-
-function fromUnit() {
-  if(document.getElementById('celciusButton').clicked) {
-   const celciusTemp = (userInput * 9/5) + 32;
+function fromCelcius(temp) {
+  if (fromUnit === "C") {
+    if (toUnit === "F") {
+      celcius = (temp * 9) / 5 + 32;
+    } else if (toUnit === "K") {
+      celcius = temp + 273.15;
+    } else {
+      return temp;
+    }
   }
-} 
+  return celcius;
+}
 
-submitButton.addEventListener("click", () => {
-  console.log(fromUnit());
-}); 
+console.log(fromCelcius(userInput));
+console.log(fromUnit)
+console.log(toUnit)
 
-
-
-// function convertTemperature(){
-//   const userInput = Number(document.getElementById("userInput").value);
-//   let hasil = toCelcius(userInput).toFixed(2);
-
-//   function toCelcius(temp) {
-//     fahrenheitToCelcius = ((temp - 32) * 5) / 9;
-//     return fahrenheitToCelcius;
-//   }
-
-//   function toFahrenheit(temp) {
-//     celciusToFahrenheit = (temp * 9) / 5 + 32;
-//     return celciusToFahrenheit;
-//   }
-
-//   if (isNaN(userInput)) {
-//     document.getElementById("result").innerText = "Please enter a number";
-//   } else {
-//     document.getElementById("result").innerText = hasil;
-//   }
-
-//   console.log(toFahrenheit(userInput).toFixed(2));
-//   console.log(toCelcius(userInput).toFixed(2)); }
+submitButton.addEventListener("click", function () {
+  console.log(fromCelcius(userInput));
+  result.innerText = userInput;
+  
+});

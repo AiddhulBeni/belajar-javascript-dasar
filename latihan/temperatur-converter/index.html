@@ -7,36 +7,40 @@
   </head>
   <body>
     <section>
-      <label for="">Input Temperatur</label>
-      <input type="text" id="userInput" placeholder="Masukkan suhu" step="0.01"/>&#176C<br />
-
       <div>
-        <label for="">Convert to :</label><br />
-        <input type="radio" name="unit" id="celciusButton" />
-        <label for="celciusButton">Celcius</label><br />
-      </div>
+        <h1>Temperatur Converter</h1>
+        <label for="userInput">Input Temperature : </label><br />
+        <input type="number" id="userInput" />
 
-      <div>
-        <input type="radio" name="unit" id="fahrenheitButton" />
-        <label for="fahrenheitButton">Fahrenheit</label><br />
-      </div>
-
-      <div>
-        <input type="radio" name="unit" id="kelvinButton" />
-        <label for="kelvinButton">Kelvin</label>
+        <div class="fromUnit">
+          <select name="fromUnit" id="fromUnit">
+            <option value="C">Celcius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+          </select>
+        </div>
+        <br>
+        <span>Convert To</span>
+        <br><br>
+        <div class="toUnit">
+          <select name="toUnit" id="toUnit">
+            <option value="C">Celcius</option>
+            <option value="F">Fahrenheit</option>
+            <option value="K">Kelvin</option>
+          </select>
+        </div>
+        <br>
+        <div>
+          <button type="button" id="submitButton">Submit</button>
+          <p>Hasil : <span id="result"></span>
+          </p>
+        </div>
       </div>
     </section>
-
-    <button id="submitButton">Submit</button>
-
-    <p>Hasil : <span id="result"></span></p>
-
-  
-    <script src="script.js"></script>
+    <!-- <script src="script.js"></script> -->
     <script src="temp-convert.js"></script>
   </body>
 </html>
-
 
 <!-- <section>
   <label for="">Input Temperatur</label>
