@@ -6,3 +6,4 @@ const person = {
 };
 
 person.sayHello(person.name);
+

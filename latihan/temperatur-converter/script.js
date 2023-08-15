@@ -1,29 +1,59 @@
-const userInput = Number(document.getElementById("userInput").value);
-const fromUnit = document.getElementById("fromUnit").value;
-const toUnit = document.getElementById("toUnit").value;
 const submitButton = document.getElementById("submitButton");
-const result = document.getElementById("result");
-//const userInput = 10
+const finalResult = document.getElementById("result");
 
-function fromCelcius(temp) {
-  if (fromUnit === "C") {
-    if (toUnit === "F") {
-      celcius = (temp * 9) / 5 + 32;
-    } else if (toUnit === "K") {
-      celcius = temp + 273.15;
-    } else {
-      return temp;
+submitButton.addEventListener("click", () => {
+  const userInput = parseFloat(document.getElementById("userInput").value);
+  const fromUnit = document.getElementById("fromUnit").value;
+  const toUnit = document.getElementById("toUnit").value;
+  let result;
+
+  function fromCelcius(temp) {
+    
+    if (fromUnit === "C") {
+      if (toUnit === "F") {
+        result = (temp * 9) / 5 + 32;
+      } else if (toUnit === "K") {
+        result = temp + 273.15;
+        
+      } else {
+        return result = temp;
+      }
     }
+    return result;
   }
-  return celcius;
-}
 
-console.log(fromCelcius(userInput));
-console.log(fromUnit)
-console.log(toUnit)
+  function fromFahrenheit(temp) {
+    if(fromUnit === "F"){
+      if(toUnit === "C"){
+        result = (temp - 32) * 5/9; 
+      }else if(toUnit === "K") {
+        result = (temp - 32) * 5/9 + 273.15;
+      }else{
+        return result = temp;
+      }
+    }
+    return result;
+  }
 
-submitButton.addEventListener("click", function () {
-  console.log(fromCelcius(userInput));
-  result.innerText = userInput;
-  
+  function fromKelvin(temp) {
+    if(fromUnit === "K") {
+      if(toUnit === "C"){
+        result = temp - 273.15; 
+      }else if(toUnit === "F"){
+        result = (temp - 273.15) * 9/5 + 32; 
+      }else{
+        return result = temp;
+      }
+    }
+    return result;
+  }
+  fromCelcius(userInput);
+  fromFahrenheit(userInput);
+  fromKelvin(userInput);
+
+  if(isNaN(userInput) || userInput === undefined){
+    finalResult.innerText = "Please enter a number";
+  }else(
+    finalResult.innerText = `${result}\u00B0${toUnit}`
+  )
 });
